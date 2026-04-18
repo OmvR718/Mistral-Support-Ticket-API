@@ -17,3 +17,6 @@ def create_user(db:Session,username:str,password:str,email:str)->User:
     db.commit()
     db.refresh(db_user)
     return db_user
+
+def get_id_from_username(db:Session,user_name:str)->int | None:
+    return db.query(User.id).filter(User.username==user_name).scalar()

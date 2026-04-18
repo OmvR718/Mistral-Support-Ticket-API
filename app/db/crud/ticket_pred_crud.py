@@ -35,3 +35,11 @@ def get_prediction_by_ticket(
         .filter(TicketPrediction.ticket_id == ticket_id)
         .first()
     )
+def get_predictions(db: Session, limit: int = 10, offset: int = 0):
+    return (
+        db.query(TicketPrediction)
+        .order_by(TicketPrediction.id.desc())
+        .limit(limit)
+        .offset(offset)
+        .all()
+    )

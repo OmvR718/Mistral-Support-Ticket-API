@@ -7,7 +7,7 @@ from app.db.crud.user_crud import (
     get_user_by_email,
     get_user_by_username,
 )
-from app.schemas.schemas import LoginRequest, SignUpRequest
+from app.schemas.auth import LoginRequest, SignUpRequest
 
 
 def signup_user(db: Session, payload: SignUpRequest):

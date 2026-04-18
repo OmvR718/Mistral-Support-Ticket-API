@@ -46,3 +46,17 @@ def get_logs_by_ticket(
         .limit(limit)
         .all()
     )
+    
+def get_logs_by_user(
+    db: Session,
+    user_id: int,
+    limit: int = 20
+) -> list[Log]:
+
+    return (
+        db.query(Log)
+        .filter(Log.user_id == user_id)
+        .order_by(Log.created_at.desc())
+        .limit(limit)
+        .all()
+    )

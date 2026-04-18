@@ -6,7 +6,7 @@ from fastapi.security import HTTPBearer
 
 http_bearer=HTTPBearer()
 http_bearer_optional=HTTPBearer(auto_error=False)
-SECRET_KEY=os.getenv("SECRET_KEY","dev-secret-change-me")
+SECRET_KEY=os.getenv("SECRET_KEY","dev-secret-key-change-me-in-production-use-a-strong-random-string")
 ALGORITHM="HS256"
 
 

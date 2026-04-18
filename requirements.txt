@@ -1,0 +1,12 @@
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+sqlalchemy==2.0.23
+pg8000==1.30.4
+psycopg2-binary==2.9.9
+pgvector==0.2.4
+pydantic[email]==2.5.0
+bcrypt==4.1.2
+PyJWT==2.8.0
+python-multipart==0.0.6
+ollama==0.1.7
+requests==2.31.0

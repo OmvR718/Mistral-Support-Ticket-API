@@ -49,3 +49,4 @@ def classify_ticket_pipeline(db, ticket):
         "citations": citations,
         "raw_output": raw_output
     }
+    

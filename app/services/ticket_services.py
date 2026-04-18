@@ -6,7 +6,7 @@ from app.db.crud.ticket_crud import (
     get_created_ticket,
     get_user_created_tickets,
 )
-from app.schemas.schemas import TicketCreate
+from app.schemas.tickets import TicketCreate
 
 def check_ticket_unique(db:Session,payload:TicketCreate,user_id:int):
     if get_created_ticket(db,payload.subject):

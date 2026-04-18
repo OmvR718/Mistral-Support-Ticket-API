@@ -6,11 +6,12 @@ from app.db.models import Ticket
 from app.ai.pipelines.classify_ticket import classify_ticket_pipeline
 from app.db.crud.ticket_pred_crud import create_prediction
 from app.db.crud.logs_crud import create_log
+from app.core.dependencies import get_current_user_id
 
 router = APIRouter()
 
 @router.post("/tickets/{id}/classify")
-def classify_ticket(id: int, db: Session = Depends(get_database)):
+def classify_ticket(id: int, db: Session = Depends(get_database), user_id: int = Depends(get_current_user_id)):
 
     # 1. Fetch ticket
     ticket = db.query(Ticket).filter(Ticket.id == id).first()

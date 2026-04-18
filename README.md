@@ -34,7 +34,7 @@ A comprehensive FastAPI-based support ticket system that uses Mistral AI for aut
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/OmvR718/Mistral-Support-Ticket-API.git
 cd Mistral-Support-Ticket-API
 ```
 
